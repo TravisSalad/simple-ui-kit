@@ -1,6 +1,5 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import {Style} from '../Button/Button';
 
 export interface LinkProps {
     active?: boolean;
@@ -8,7 +7,7 @@ export interface LinkProps {
     className?: string;
     disabled?: boolean;
     href?: string;
-    style?: Style;
+    style?: any;
     title?: string;
     tabIndex?: number;
     type?: string;
@@ -50,7 +49,7 @@ export class Link extends React.Component<LinkProps> {
         target: '__self',
     };
 
-    handleKeyDown = (e) => {
+    handleKeyUp = (e) => {
         if (e.keyCode === 13 || e.keyCode === 32) {
             this.props.handleClick;
         };
@@ -66,7 +65,7 @@ export class Link extends React.Component<LinkProps> {
                 style={this.props.style}
                 target={this.props.target}
                 type={this.props.type}
-                onKeyDown={!this.props.disabled ? this.handleKeyDown : undefined}
+                onKeyUp={!this.props.disabled ? this.handleKeyUp : undefined}
             >
                 {this.props.title}
                 {this.props.children}

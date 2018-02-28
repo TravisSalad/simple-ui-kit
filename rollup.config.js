@@ -8,7 +8,7 @@ export default {
         { file: "build/index.es.js", format: "es" },
     ],
     exports: "named",
-    external: ["react", "styled-components", "react-dom"],
+    external: ["react", "styled-components", "react-dom", "prop-types"],
     plugins: [
         resolve({ main: true }),
         typescript(),

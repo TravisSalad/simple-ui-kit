@@ -6,7 +6,6 @@ export interface TableHeaderColumnProps {
     children?: React.ReactChild|React.ReactChild[];
     className?: string;
     column: TableColumnProps;
-    headerColumnClicked?: {(val: TableColumnProps): void},
     style?: object;
 };
 
@@ -30,18 +29,19 @@ N/Eg2BbqpRHe9F+x9AHwvBUAAAAASUVORK5CYII=) no-repeat center right;
 `;
 
 export function TableHeaderColumn(props: TableHeaderColumnProps) {
-    var showSort = (props.headerColumnClicked && props.column.sortProperty);
+    var showSort = (props.column.headerColumnClicked && props.column.sort);
     var textAlign = (props.column.alignText ? props.column.alignText.toLowerCase() : 'left');
     var headerColumnStyle = {
         ...props.style, 
         cursor: (showSort ? "pointer" : "auto"),
         textAlign,
     };
+    console.log("props: ", props)
     return (
         <HeaderColumn
             style={headerColumnStyle}
             className={props.className}
-            onClick={props.headerColumnClicked ? () => props.headerColumnClicked(props.column) : null}
+            onClick={props.column.headerColumnClicked ? () => props.column.headerColumnClicked(props.column) : null}
         >
             {props.children || props.column.title}
             {showSort ? <ToggleIcon /> : undefined}

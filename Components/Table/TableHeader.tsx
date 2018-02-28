@@ -8,7 +8,6 @@ export interface TableHeaderProps {
     children?: React.ReactChild|React.ReactChild[];
     className?: string;
     columns: TableColumnProps[];
-    headerColumnClicked?: (val: TableColumnProps) => void;
     style?: object;
     rowStyle?: object;
 };
@@ -20,7 +19,6 @@ function renderTableColumns(props: TableHeaderProps): JSX.Element[] {
         return (
             <TableHeaderColumn
                 style={props.rowStyle}
-                headerColumnClicked={props.headerColumnClicked || null}
                 key={`${i}-${column.title}`}
                 column={column}
             />

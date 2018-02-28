@@ -61,6 +61,7 @@ A collection of UI elements that you can import into your React project.
 - Sticky element
 - Tabs
 - Tile
+- Toast
 - Tooltips
 - Vertical navigation
 

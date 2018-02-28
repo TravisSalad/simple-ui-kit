@@ -6,6 +6,8 @@ export * from './Table/TableHeader';
 export * from './Table/TableHeaderColumn';
 export * from './Table/TableRow';
 export * from './Modal/Modal';
+export * from './Modal/withModal';
 export * from './Pagination/Paginator';
 export * from './Button/Button';
 export * from './Link/Link';
+export * from './Modal/ModalDom';

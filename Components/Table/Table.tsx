@@ -5,9 +5,10 @@ import {TableFooter} from './TableFooter';
 import styled from 'styled-components';
 
 export interface TableColumnProps {
+    headerColumnClicked?: (val: TableColumnProps) => void;
+    sort?: boolean;
     alignText?: string;
     placeholder?: string;
-    sortProperty?: string;
     title?: string;
     value?: any;
 };
@@ -42,7 +43,6 @@ export function Table(props: TableProps) {
                 style={props.headerStyle}
                 rowStyle={props.rowStyle}
                 columns={props.columns}
-                headerColumnClicked={props.headerColumnClicked}
             />
             {props.children}
             <TableBody
@@ -52,7 +52,7 @@ export function Table(props: TableProps) {
                 columns={props.columns}
                 data={props.data}
                 showRowHover={props.showRowHover}
-            /> 
+            />
         </TableWrapper>
     );
 };
