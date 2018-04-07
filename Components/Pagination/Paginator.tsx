@@ -43,7 +43,7 @@ export class Paginator extends React.Component<PaginatorProps> {
                     marginRight: '.5em'
                 }}
                 type="link"
-                handleClick={() => this.props.updatePage(pageReference)}
+                onClick={() => this.props.updatePage(pageReference)}
             >
                 {button}
             </Button>

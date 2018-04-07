@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export interface LinkProps {
     active?: boolean;
-    handleClick?: (arg: any) => void;
+    onClick?: (arg: any) => void;
     className?: string;
     disabled?: boolean;
     href?: string;
@@ -51,7 +51,7 @@ export class Link extends React.Component<LinkProps> {
 
     handleKeyUp = (e) => {
         if (e.keyCode === 13 || e.keyCode === 32) {
-            this.props.handleClick;
+            this.props.onClick;
         };
     };
 
@@ -59,7 +59,7 @@ export class Link extends React.Component<LinkProps> {
         return(
             <StyledLink
                 className={this.props.className}
-                onClick={!this.props.disabled ? this.props.handleClick : undefined}
+                onClick={!this.props.disabled ? this.props.onClick : undefined}
                 href={this.props.href}
                 tabIndex={this.props.tabIndex}
                 style={this.props.style}

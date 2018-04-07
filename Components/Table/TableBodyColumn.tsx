@@ -19,7 +19,7 @@ export function TableBodyColumn(props: TableBodyColumnProps) {
     return (
         <BodyColumn
             style={tableBodyColumnStyle}
-            className={props.className}
+            className="simple-table__body__column"
         >
             {props.children || props.value}
         </BodyColumn>

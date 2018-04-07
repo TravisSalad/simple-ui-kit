@@ -4,7 +4,7 @@ import { Link } from '../Link/Link';
 
 export interface ButtonProps {
     active?: boolean;
-    handleClick?: (arg: any) => void;
+    onClick?: (arg: any) => void;
     className?: string;
     disabled?: boolean;
     href?: string;
@@ -63,7 +63,7 @@ export class Button extends React.Component<ButtonProps> {
 
     handleKeyUp = (e) => {
         if (e.keyCode === 13 || e.keyCode === 32) {
-            this.props.handleClick;
+            this.props.onClick;
         };
     };
 
@@ -80,7 +80,7 @@ export class Button extends React.Component<ButtonProps> {
             return (
                 <StyledButton
                     className={buttonClasses}
-                    onClick={!this.props.disabled ? this.props.handleClick : undefined}
+                    onClick={!this.props.disabled ? this.props.onClick : undefined}
                     tabIndex={this.props.tabIndex}
                     style={this.props.style}
                     onKeyUp={!this.props.disabled ? this.handleKeyUp : undefined}

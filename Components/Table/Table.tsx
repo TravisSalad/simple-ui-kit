@@ -36,23 +36,26 @@ var TableWrapper = styled.table`
 export function Table(props: TableProps) {
     return (
         <TableWrapper
-            className={props.className}
+            className="simple-table"
             style={props.style}
         >
-            <TableHeader
-                style={props.headerStyle}
-                rowStyle={props.rowStyle}
-                columns={props.columns}
-            />
-            {props.children}
-            <TableBody
-                striped={props.striped}
-                style={props.bodyStyle}
-                rowStyle={props.rowStyle}
-                columns={props.columns}
-                data={props.data}
-                showRowHover={props.showRowHover}
-            />
+            {props.children ? props.children :
+                <>
+                    <TableHeader
+                        style={props.headerStyle}
+                        rowStyle={props.rowStyle}
+                        columns={props.columns}
+                    />
+                    <TableBody
+                        striped={props.striped}
+                        style={props.bodyStyle}
+                        rowStyle={props.rowStyle}
+                        columns={props.columns}
+                        data={props.data}
+                        showRowHover={props.showRowHover}
+                    />
+                </>
+            }
         </TableWrapper>
     );
 };

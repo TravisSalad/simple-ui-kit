@@ -40,7 +40,7 @@ export function TableHeaderColumn(props: TableHeaderColumnProps) {
     return (
         <HeaderColumn
             style={headerColumnStyle}
-            className={props.className}
+            className="simple-table__header__column"
             onClick={props.column.headerColumnClicked ? () => props.column.headerColumnClicked(props.column) : null}
         >
             {props.children || props.column.title}

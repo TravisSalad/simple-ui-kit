@@ -14,7 +14,7 @@ export interface TableHeaderProps {
 
 var StyledTableHeader = styled.thead``;
 
-function renderTableColumns(props: TableHeaderProps): JSX.Element[] {
+function renderTableColumns(props: TableHeaderProps): React.ReactNode[] {
     return props.columns.map((column, i) => {
         return (
             <TableHeaderColumn
@@ -30,7 +30,7 @@ export function TableHeader(props: TableHeaderProps) {
     return (
         <StyledTableHeader
             style={props.style}
-            className={props.className}
+            className="simple-table__header"
         >
             <TableRow>
                 {props.children || renderTableColumns(props)}

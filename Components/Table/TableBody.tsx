@@ -46,7 +46,7 @@ export function TableBody(props: TableBodyProps) {
     return (
         <StyledBody
             style={props.style}
-            className={props.className}
+            className="simple-table__body"
         >
             {props.children || createTableBody(props)}
         </StyledBody>

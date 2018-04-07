@@ -8,11 +8,12 @@
     "react": "^16.0.0"
   },
   "dependencies": {
-    "prop-types": "^15.6.0",
-    "react": "^16.0.0",
+    "@types/react": "^16.0.39",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "webpack": "^2.6.1",
-    "styled-components": "^2.2.3"
+    "styled-components": "^2.4.0",
+    "webpack": "^2.6.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,14 +26,13 @@
     "Travis Salad <travissalad@gmail.com> (http://travissalad.com)"
   ],
   "devDependencies": {
-    "@storybook/addon-actions": "^3.2.14",
     "@storybook/addon-links": "^3.2.14",
     "@storybook/react": "^3.2.14",
     "@types/prop-types": "^15.5.2",
-    "polished": "^1.8.2",
-    "rollup": "^0.51.3",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-typescript2": "^0.8.0",
-    "typescript": "^2.6.1"
+    "polished": "^1.9.2",
+    "rollup": "^0.51.8",
+    "rollup-plugin-node-resolve": "^3.0.3",
+    "rollup-plugin-typescript2": "^0.8.4",
+    "typescript": "^2.7.2"
   }
 }

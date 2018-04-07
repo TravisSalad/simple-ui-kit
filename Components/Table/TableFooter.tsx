@@ -28,7 +28,7 @@ function createTableFooter(props: TableFooterProps) {
 export function TableFooter(props: TableFooterProps) {
     return (
         <StyledTableFooter
-            className={props.className}
+            className="simple-table__footer"
             style={props.style}
         >
             <TableRow>

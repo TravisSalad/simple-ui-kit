@@ -35,7 +35,7 @@ export class TableRow extends React.Component <TableRowProps, TableRowState> {
                 onMouseEnter={() => this.setState({ hovered: true })}
                 onMouseLeave={() => this.setState({ hovered: false })}
                 style={tableRowStyle}
-                className={this.props.className}
+                className="simple-table__row"
             >
                 {this.props.children}
             </StyledTableRow>
