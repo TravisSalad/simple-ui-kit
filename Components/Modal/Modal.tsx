@@ -104,7 +104,7 @@ function closeIconKeyUp(e, cb) {
 function createHeader(props: ModalProps) {
     return (
         <HeaderWrapper>
-            {props.title ? 
+            {props.title && 
                 <StyledTitle
                     tabIndex={1}
                     className={props.titleClass}
@@ -112,7 +112,7 @@ function createHeader(props: ModalProps) {
                 >
                     {props.title}
                 </StyledTitle>
-            : undefined}
+            }
             <CloseIcon
                 onKeyUp={(e) => closeIconKeyUp(e, props.handleClose)}
                 tabIndex={1}

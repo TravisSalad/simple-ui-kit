@@ -39,7 +39,7 @@ export function Table(props: TableProps) {
             className="simple-table"
             style={props.style}
         >
-            {props.children ? props.children :
+            {props.children ||
                 <>
                     <TableHeader
                         style={props.headerStyle}

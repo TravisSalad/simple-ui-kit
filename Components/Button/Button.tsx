@@ -70,8 +70,8 @@ export class Button extends React.Component<ButtonProps> {
     render() {
         var buttonClasses = [
             this.props.className,
-            this.props.active ? 'active' : null,
-            this.props.disabled ? 'disabled' : null,
+            this.props.active && 'active',
+            this.props.disabled && 'disabled',
         ].join(' ').trim();
         
         if (this.props.type.toLowerCase() === 'link') {
@@ -80,10 +80,10 @@ export class Button extends React.Component<ButtonProps> {
             return (
                 <StyledButton
                     className={buttonClasses}
-                    onClick={!this.props.disabled ? this.props.onClick : undefined}
+                    onClick={!this.props.disabled && this.props.onClick}
                     tabIndex={this.props.tabIndex}
                     style={this.props.style}
-                    onKeyUp={!this.props.disabled ? this.handleKeyUp : undefined}
+                    onKeyUp={!this.props.disabled && this.handleKeyUp}
                 >
                     {this.props.title}
                     {this.props.children}

@@ -75,13 +75,13 @@ export class Paginator extends React.Component<PaginatorProps> {
 
         return (
             <StyledPaginatorWrapper className={className} style={this.props.style}>
-                {jumpToEnd && numPages ? this.createButton('Start', currentPage === 1, false, 1) : null}
-                {showNextButton && numPages ? this.createButton('Prev', currentPage === 1, false, currentPage - 1) : null}
-                {numPages > 5 && currentPage > 3 ? <span><span>{this.createButton('1', false, false, 1)}</span><span>...</span></span> : null}
+                {jumpToEnd && numPages && this.createButton('Start', currentPage === 1, false, 1)}
+                {showNextButton && numPages && this.createButton('Prev', currentPage === 1, false, currentPage - 1)}
+                {numPages > 5 && currentPage > 3 && <span><span>{this.createButton('1', false, false, 1)}</span><span>...</span></span>}
                 {this.numberedPages(numPages, currentPage, updatePage)}
-                {numPages > 5 && currentPage + 3 < numPages ? <span><span>...</span><span>{this.createButton(numPages.toString(), false, false, numPages)}</span></span> : null}
-                {showNextButton && numPages ? this.createButton('Next', currentPage === numPages, false, currentPage + 1) : null}
-                {jumpToEnd && numPages ? this.createButton('End', currentPage === numPages, false, numPages) : null}
+                {numPages > 5 && currentPage + 3 < numPages && <span><span>...</span><span>{this.createButton(numPages.toString(), false, false, numPages)}</span></span>}
+                {showNextButton && numPages && this.createButton('Next', currentPage === numPages, false, currentPage + 1)}
+                {jumpToEnd && numPages && this.createButton('End', currentPage === numPages, false, numPages)}
             </StyledPaginatorWrapper>
         );
     };
