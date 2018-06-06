@@ -3,6 +3,7 @@
 A collection of UI elements that you can import into your React project.
 
 ## Collection includes:
+- Badge
 - Tables
   - responsive
   - sortable
@@ -18,7 +19,6 @@ A collection of UI elements that you can import into your React project.
 - Alert
 - Avatar
 - Avatar with text
-- Badge
 - Bread crumbs
 - Button
 - Card
